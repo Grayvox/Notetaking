@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "notetaking",
+  "version": "${version}",
+  "name": "Notetaking",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/notetaking/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.grayvox.notetaking.client.NotetakingClient"
+    ],
+    "main": [
+      "com.grayvox.notetaking.Notetaking"
+    ]
+  },
+  "mixins": [
+    "notetaking.mixins.json",
+    {
+      "config": "notetaking.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
